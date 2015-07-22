@@ -1,7 +1,25 @@
-## Caching the Inverse of a Matrix
-## Matrix inversion is usually a costly computation.
-## There may be some benefit to caching the inverse of
-## a matrix rather than compute it repeatedly.
+## Thanks for the help of all the committed people out there in the in the Web. 
+
+## Calling the functions and getting results:
+
+## v<-makeCacheMatrix();
+## v$set(matrix(c(1,0,5,2,3,5,7,0,4), 3, 3));
+## cacheSolve(v) - Fisrt time;
+##           [,1]        [,2]        [,3];
+## [1,] -0.1290323 -0.29032258  0.22580645;
+## [2,]  0.0000000  0.33333333  0.00000000;
+## [3,]  0.1612903 -0.05376344 -0.03225806;
+## cacheSolve(v) - Second time;
+## [1] "Getting values from cached data..."
+##            [,1]        [,2]        [,3]
+## [1,] -0.1290323 -0.29032258  0.22580645
+## [2,]  0.0000000  0.33333333  0.00000000
+## [3,]  0.1612903 -0.05376344 -0.03225806
+
+## Caching the Inverse of a Matrix.
+## Matrix inversion is a time consumming task so
+## there are benefits to caching a matrix's inverse 
+## rather than computing it every time its values are needed.
 
 makeCacheMatrix <- function(x=matrix()) {
 
